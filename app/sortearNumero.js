@@ -1,7 +1,15 @@
-var box = document.querySelector(".box");
+const menorValor = 1
+const maiorValor = 1000
+const numeroSecreto = gerarNumeroAleatorio()
 
-var gerarNumeroRandomico = () => {
-  box.innerHTML = parseInt(Math.random() * 100);
-};
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * maiorValor + 1)
+}
 
-gerarNumeroRandomico();
+console.log('Número Secreto:', numeroSecreto)
+
+const elementoMenorValor = document.getElementById('menor-valor')
+elementoMenorValor.innerHTML = menorValor
+
+const elementoMaiorValor = document.getElementById('maior-valor')
+elementoMaiorValor.innerHTML = maiorValor
